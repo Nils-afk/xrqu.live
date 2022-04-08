@@ -73,7 +73,10 @@ export default function Home() {
                     )}
                   </div>
                   <p className="text-white/50 text-md mt-3">
-                   Hello everyone! 👋 my name is xrqu and i live in turkey. I build discord bots and websites. i am a beginner. I'm not very good, but as long as you love, we can do it <3 
+                   Hello everyone!  
+                   my name is xrqu and i live in turkey. 
+                   I build discord bots and websites. i am a beginner. 
+                   I'm not very good, but as long as you love, we can do it
                   </p>
                 </div>
                 <div
