@@ -1,5 +1,5 @@
-# clqu.live - Personal Website<br/>
-#### [Demo](https://clqu.live) - [Discord Support](https://discord.gg/VmjJqQy4bz)
+# xrqu.live - Personal Website<br/>
+#### [Demo](https://xrqu.live) - [Discord Support](https://discord.com/users/850299286595698718)
 
 
 
