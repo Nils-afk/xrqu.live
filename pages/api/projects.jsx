@@ -20,5 +20,6 @@ export default async (req, res) => {
       language: "Next.js",
       languageIcon: "./assets/techs/nextjs.svg",
     },
+   ];
   res.status(200).json(data);
-}
+};
