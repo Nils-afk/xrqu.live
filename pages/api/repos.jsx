@@ -5,18 +5,9 @@ let key2 = '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'
 
 export default async (req, res) => {
     let _ = await (await fetch('https://api.github.com/users/xrqujs/repos', {
-        headers: {
-            Authorization: 'token '+key1+key2
-        }
+        headers: {}
     })).json(); 
-
-  
-        
-           
-        
-    
-   
-    try {
+try {
         res.send([..._])
     } catch {
         res.status(500);
