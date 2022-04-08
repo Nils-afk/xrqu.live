@@ -16,14 +16,14 @@ export default async (req, res) => {
         }
     })).json();
     
-    let ___ = await (await fetch('https://api.github.com/users/zackbeydev/repos', {
-        headers: {
-            Authorization: 'token '+key1+key2
-        }
-    })).json();
+   
+        
+            
+       
+   
     
     try {
-        res.send([..._, ...__, ...___])
+        res.send([..._, ...__])
     } catch {
         res.status(500);
     }
