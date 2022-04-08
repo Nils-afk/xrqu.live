@@ -3,15 +3,12 @@ const fetch = require('isomorphic-unfetch')
 let key1 = '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';
 
 export default async (req, res) => {
-    let _ = await (await fetch('https://api.github.com/users/xrqujs/repos', {
-        headers: {
-            Authorization: 'token '+key1
+    let _ = await (await fetch('https://api.github.com/users/xrqujs/repos',
         }
     })).json();
 
-    let __ = await (await fetch('https://api.github.com/users/xlqudev/repos', {
-        headers: {
-            Authorization: 'token '+key1
+    let __ = await (await fetch('https://api.github.com/users/xlqudev/repos',
+                                
         }
     })).json();
     
