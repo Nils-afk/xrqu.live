@@ -9,14 +9,14 @@ export default async (req, res) => {
         }
     })).json(); 
 
-    let __ = await (await fetch('https://api.github.com/users/xlqudev/repos', {
-        headers: {
-            Authorization: 'token '+key1
-        }
-    })).json();
-    
+  
+        
+           
+        
+    
+   
     try {
-        res.send([..._, ...__])
+        res.send([..._])
     } catch {
         res.status(500);
     }
