@@ -1,7 +1,7 @@
 const items = [
-    { icon: 'fab fa-spotify', link: 'https://open.spotify.com/user/2ln4q9hmq16bji4c1uva0ntgc' },
-    { icon: 'fab fa-instagram', link: 'https://instagram.com/this.clqu' },
-    { icon: 'fab fa-github', link: 'https://github.com/clqu' },
+    { icon: 'fab fa-spotify', link: 'https://open.spotify.com/user/probrawl' },
+    { icon: 'fab fa-instagram', link: 'https://instagram.com/xrqu.live' },
+    { icon: 'fab fa-github', link: 'https://github.com/xrqujs' },
 ]
 const navItems = [
     { icon: 'fal fa-home', active: 'fa fa-home', label: 'Home', href: '/' },
@@ -17,7 +17,7 @@ const Header = () => {
     return <>
         <div className="w-full border-b-2 border-[#191932]/10 pb-2">
             <div className="flex flex-col md:flex-row w-full items-center md:justify-between">
-                <p className="font-semibold font-Poppins text-xl">clqu</p>
+                <p className="font-semibold font-Poppins text-xl">xrqu</p>
                 <div className="flex items-center space-x-2">
                     {items.map(item => (
                         <a key={item.link} href={item.link} target="_blank" rel="noreferrer" className="flex items-center justify-center hover:bg-neutral-700/20 rounded-xl transition-all duration-150 p-2 px-3">
