@@ -8,7 +8,7 @@ export default async (req, res) => {
         "Vito bot is a Turkish-language moderation bot.",
       link: "https://vitobot.ml",
       language: "js",
-      languageIcon: "./assets/techs/js.svg",
+      languageIcon: "./assets/techs/javascript.svg",
     },
     {
       id: 2,
