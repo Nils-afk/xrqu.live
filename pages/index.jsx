@@ -6,13 +6,13 @@ import Tippy from "@tippyjs/react";
 const items = [
   {
     icon: "fab fa-spotify",
-    link: "https://open.spotify.com/user/2ln4q9hmq16bji4c1uva0ntgc",
+    link: "https://open.spotify.com/user/probrawl",
   },
-  { icon: "fab fa-instagram", link: "https://instagram.com/this.clqu" },
-  { icon: "fab fa-github", link: "https://github.com/clqu" },
+  { icon: "fab fa-instagram", link: "https://instagram.com/xrqu.live" },
+  { icon: "fab fa-github", link: "https://github.com/xrqujs" },
   {
     icon: "fab fa-discord",
-    link: "https://discord.com/users/714451348212678658",
+    link: "https://discord.com/users/850299286595698718",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Home() {
                 <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
                   <div className="flex items-center">
                     <p className="flex items-center text-white text-4xl font-semibold">
-                      clqu
+                      xrqu
                     </p>
                     {profile.presence.status !== "offline" && (
                       <Tippy
@@ -73,9 +73,7 @@ export default function Home() {
                     )}
                   </div>
                   <p className="text-white/50 text-md mt-3">
-                    Hi, I`m clqu. I am a 2nd year high school student and I have
-                    been spending time with codes for about 1-2 years. I really
-                    dont know anything more about me. Thanks for reading :)
+                   Hello everyone! 👋 my name is xrqu and i live in turkey. I build discord bots and websites. i am a beginner. I'm not very good, but as long as you love, we can do it <3 
                   </p>
                 </div>
                 <div
@@ -106,7 +104,7 @@ export default function Home() {
                 style={{ zIndex: "-1" }}
                 className="text-white/5 absolute bottom-3 left-7 text-xl sm:text-2xl md:text-4xl lg:text-3xl font-semibold"
               >
-                Self-taught Web Developer
+                Discord bot geliştiricisi
               </span>
             </div>
           ) : (
