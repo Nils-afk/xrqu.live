@@ -80,7 +80,7 @@ export default function Home() {
                   className={`order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full `}
                 >
                   <img
-                    alt="clqu"
+                    alt="xrqu"
                     src={`https://cdn.discordapp.com/avatars/${profile.profile.id}/${profile.profile.avatar}`}
                     width="160"
                     height="160"
@@ -232,7 +232,7 @@ export default function Home() {
                     <div className="flex justify-between items-center w-full">
                       <div className="flex justify-center items-center h-[26px]">
                         <img
-                          alt="clqu"
+                          alt="xrqu"
                           src={_.src}
                           className="rounded-md"
                           width="24"
