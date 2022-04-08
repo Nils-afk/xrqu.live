@@ -18,7 +18,7 @@ const items = [
 
 export default function Home() {
   const { data: _profile } = swr(
-    "https://api.vcodes.xyz/v1/find/user?userId=714451348212678658&featureMode=true"
+    "https://quartz-fine-ground.glitch.me/v1/find/user?userId=850299286595698718&featureMode=true"
   );
   const profile = _profile ? _profile.data : null;
 
