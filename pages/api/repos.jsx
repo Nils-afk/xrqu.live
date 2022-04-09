@@ -7,17 +7,17 @@ export default async (req, res) => {
         headers: {}
     })).json(); 
   
-export default async (req, res) => {
-    let _ = await (await fetch('https://api.github.com/users/xlqudev/repos', {
-        headers: {}
-    })).json();
 
-export default async (req, res) => {
-    let _ = await (await fetch('https://api.github.com/users/vitobot-ml/repos', {
-        headers: {}
-    })).json();
+ 
+        
+    
+
+
+
+        
+    
 try {
-        res.send([..._,...__,...___])
+        res.send([..._])
     } catch {
         res.status(500);
     }
