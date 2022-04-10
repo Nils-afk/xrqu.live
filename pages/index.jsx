@@ -18,7 +18,7 @@ const items = [
 
 export default function Home() {
   const { data: _profile } = swr(
-    "https://api.vcodes.xyz/v1/find/user?userId=850299286595698718&featureMode=true"
+    "https://linkcord.swoth.xyz/api/v1/user/850299286595698718"
   );
   const profile = _profile ? _profile.data : null;
 
@@ -44,34 +44,34 @@ export default function Home() {
   return (
     <>
       <div className="bg-[#191932]/20 shadow-xl rounded-lg w-full h-auto mt-6">
-        {_profile ? (
-          profile ? (
-            <div className="relative">
-              <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
-                <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
-                  <div className="flex items-center">
-                    <p className="flex items-center text-white text-4xl font-semibold">
-                      xrqu
-                    </p>
-                    {profile.presence.status !== "offline" && (
-                      <Tippy
-                        content={`${
-                          statuses[profile.presence.status].label
-                        } on Discord`}
-                        animation="shift-away"
-                        arrow={false}
+      {_profile ? (
+        profile ? (
+          <div className="relative">
+            <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
+              <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
+                <div className="flex items-center">
+                  <p className="flex items-center text-white text-4xl font-semibold">
+                    JanjyTapYT
+                  </p>
+                  {profile.user.status !== "offline" && (
+                    <Tippy
+                      content={`${
+                        statuses[profile.user.status].label
+                      } on Discord`}
+                      animation="shift-away"
+                      arrow={false}
+                    >
+                      <span
+                        className={`ml-2 text-${profile.user.status} px-2 py-1 font-normal rounded-md text-sm`}
                       >
-                        <span
-                          className={`ml-2 text-${profile.presence.status} px-2 py-1 font-normal rounded-md text-sm`}
-                        >
-                          <i
-                            className={`fa fa-circle text-${profile.presence.status} mr-2`}
-                          />
-                          {statuses[profile.presence.status].label}
-                        </span>
-                      </Tippy>
-                    )}
-                  </div>
+                        <i
+                          className={`fa fa-circle text-${profile.user.status} mr-2`}
+                        />
+                        {statuses[profile.user.status].label}
+                      </span>
+                    </Tippy>
+                  )}
+                </div>
                   <p className="text-white/50 text-md mt-3">
                    Hello everyone!  
                    my name is xrqu and i live in turkey. 
