@@ -6,9 +6,9 @@ import Tippy from "@tippyjs/react";
 const items = [
   {
     icon: "fab fa-spotify",
-    link: "https://open.spotify.com/user/probrawl?si=68afc26992d94d40",
+    link: "https://open.spotify.com/user/probrawl",
   },
-  { icon: "fab fa-instagram", link: "https://www.instagram.com/xrqu.live/" },
+  { icon: "fab fa-instagram", link: "https://instagram.com/xrqu.live" },
   { icon: "fab fa-github", link: "https://github.com/xrqujs" },
   {
     icon: "fab fa-discord",
@@ -41,93 +41,87 @@ export default function Home() {
       label: "Offline",
     },
   };
-return (
-  <>
-    <div className="bg-[#191932]/20 shadow-xl rounded-lg w-full h-auto mt-6">
-      {_profile ? (
-        profile ? (
-          <div className="relative">
-            <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
-              <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
-                <div className="flex items-center">
-                  <p className="flex items-center text-white text-4xl font-semibold">
-                    xrqu
+  return (
+    <>
+      <div className="bg-[#191932]/20 shadow-xl rounded-lg w-full h-auto mt-6">
+        {_profile ? (
+          profile ? (
+            <div className="relative">
+              <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
+                <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
+                  <div className="flex items-center">
+                    <p className="flex items-center text-white text-4xl font-semibold">
+                      xrqu
+                    </p>
+                    {profile.user.status !== "offline" && (
+                      <Tippy
+                        content={`${
+                          statuses[profile.user.status].label
+                        } on Discord`}
+                        animation="shift-away"
+                        arrow={false}
+                      >
+                        <span
+                          className={`ml-2 text-${profile.user.status} px-2 py-1 font-normal rounded-md text-sm`}
+                        >
+                          <i
+                            className={`fa fa-circle text-${profile.user.status} mr-2`}
+                          />
+                          {statuses[profile.user.status].label}
+                        </span>
+                      </Tippy>
+                    )}
+                  </div>
+                  <p className="text-white/50 text-md mt-3">
+                   Hello everyone!  
+                   my name is xrqu and i live in turkey. 
+                   I build discord bots and websites. i am a beginner. 
+                   I'm not very good, but as long as you love, we can do it
                   </p>
-                  {profile.user.status !== "offline" && (
+                </div>
+                <div
+                  className={`order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full `}
+                >
+                  <img
+                    alt="xrqu"
+                    src={`https://cdn.discordapp.com/avatars/${profile.user.id}/${profile.user.avatar}`}
+                    width="160"
+                    height="160"
+                    className={`bg-neutral-700 w-[160px] h-[160px] rounded-full`}
+                  />
+                  <div
+                    className={`pulse-avatar-${profile.user.status} rounded-full flex items-center absolute bottom-2 right-2`}
+                  >
                     <Tippy
-                      content={`${
-                        statuses[profile.user.status].label
-                      } on Discord`}
+                      content={statuses[profile.user.status].label}
                       animation="shift-away"
                       arrow={false}
                     >
-                      <span
-                        className={`ml-2 text-${profile.user.status} px-2 py-1 font-normal rounded-md text-sm`}
-                      >
-                        <i
-                          className={`fa fa-circle text-${profile.user.status} mr-2`}
-                        />
-                        {statuses[profile.user.status].label}
-                      </span>
+                      <div className="w-8 h-8 bg-[#04050E] border-2 border-red-600 rounded-full" />
                     </Tippy>
-                  )}
+                  </div>
                 </div>
-                <p className="text-white/50 text-md mt-3">
-                  Hi, I`m xrqu. I am a 11nd year high school student and I have
-                  been spending time with codes for about 1-2 years. I really
-                  dont know anything more about me. Thanks for reading :)
-                </p>
               </div>
-              <div
-                className={`order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full `}
+
+              <span
+                style={{ zIndex: "-1" }}
+                className="text-white/5 absolute bottom-3 left-7 text-xl sm:text-2xl md:text-4xl lg:text-3xl font-semibold"
               >
-                <img
-                  alt="xrqu"
-                  src={`https://cdn.discordapp.com/avatars/${profile.user.id}/${profile.user.avatar}`}
-                  width="160"
-                  height="160"
-                  className={`bg-neutral-700 w-[160px] h-[160px] rounded-full`}
-                />
-                <div
-                  className={`pulse-avatar-${profile.user.status} rounded-full flex items-center absolute bottom-2 right-2`}
-                >
-                  <Tippy
-                    content={statuses[profile.user.status].label}
-                    animation="shift-away"
-                    arrow={false}
-                  >
-                    <div className="w-8 h-8 bg-[#04050E] border-2 border-red-600 rounded-full" />
-                  </Tippy>
-                </div>
+                Discord bot geliştiricisi
+              </span>
+            </div>
+          ) : (
+            <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
+              <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
+                <div className="bg-neutral-700/30 animate-pulse w-1/2 h-[24px] rounded-md" />
+                <div className="mt-2 bg-neutral-700 animate-pulse w-[95%] h-[96px] rounded-md" />
+              </div>
+              <div className="order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full">
+                <div className="bg-neutral-700/30 animate-pulse w-[160px] h-[160px] rounded-full" />
+                <div className="absolute bottom-1 right-5 bg-neutral-700 border-4 border-neutral-800 animate-pulse w-[32px] h-[32px] rounded-full" />
               </div>
             </div>
-
-            <span
-              style={{ zIndex: "-1" }}
-              className="text-white/5 absolute bottom-3 left-7 text-xl sm:text-2xl md:text-4xl lg:text-3xl font-semibold"
-            >
-              Self-taught Web Developer
-            </span>
-          </div>
-         
-
-
-      
-
-
-
-        ) : (
-          <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
-            <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
-              <div className="bg-neutral-700/30 animate-pulse w-1/2 h-[24px] rounded-md" />
-              <div className="mt-2 bg-neutral-700 animate-pulse w-[95%] h-[96px] rounded-md" />
-            </div>
-            <div className="order-first lg:order-last flex-shrink-0 relative w-[160px] h-[160px] rounded-full">
-              <div className="bg-neutral-700/30 animate-pulse w-[160px] h-[160px] rounded-full" />
-              <div className="absolute bottom-1 right-5 bg-neutral-700 border-4 border-neutral-800 animate-pulse w-[32px] h-[32px] rounded-full" />
-            </div>
-          </div>
-        )
+          )
         ) : (
           <div className="flex flex-col lg:flex-row justify-between w-full p-6 px-8 items-center h-full">
             <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
@@ -141,7 +135,6 @@ return (
           </div>
         )}
       </div>
-
       <div className="py-20">
         <p className="text-3xl text-white font-semibold">Repositories</p>
         <p className="text-xl text-white/50 font-normal">
@@ -237,12 +230,12 @@ return (
               ? technologies.map((_, __) => (
                   <div
                     key={__}
-                    className="cursor-pointer bg-[#191932]/20 p-2 px-4 hover:bg-[#191932]/30 shadow-lg transition-all duration-200 rounded-lg w-full"
+                    className="cursor-pointer bg-[#191932]/20 p-2 px-4 hover:bg-[#191932]/30 shadow-lg hover:shadow-xl hover:shadow-[#191932]/20 transition-all duration-200 rounded-lg w-full"
                   >
                     <div className="flex justify-between items-center w-full">
                       <div className="flex justify-center items-center h-[26px]">
                         <img
-                          alt="JanjyTapYT"
+                          alt="xrqu"
                           src={_.src}
                           className="rounded-md"
                           width="24"
