@@ -18,7 +18,7 @@ const items = [
 
 export default function Home() {
   const { data: _profile } = swr(
-    "https://linkcord.swoth.xyz/api/v1/user/850299286595698718"
+    "https://api.vcodes.xyz/v1/find/user?userId=850299286595698718&featureMode=true"
   );
   const profile = _profile ? _profile.data : null;
 
