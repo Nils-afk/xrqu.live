@@ -18,7 +18,7 @@ const items = [
 
 export default function Home() {
   const { data: _profile } = swr(
-    "https://linkcord.swoth.xyz/api/v1/user/850299286595698718"
+    "https://api.lanyard.rest/v1/users/850299286595698718"
   );
   const profile = _profile ? _profile.data : null;
 
